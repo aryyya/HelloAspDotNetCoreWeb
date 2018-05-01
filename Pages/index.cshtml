@@ -1,4 +1,6 @@
 @page
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
 
 <h1>Hello, web!</h1>
 <hr>
@@ -7,3 +9,4 @@
 <hr>
 <p>This is the index page.</p>
 <p>This webpage was request at: @DateTime.Now.</p>
+<p>The server says: @Configuration["message"]</p>
